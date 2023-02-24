@@ -5,30 +5,38 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flex wrap</title>
+  <title>Cushy cuisine</title>
   <link
     href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Montserrat:wght@500;600;700;800;900&family=Poppins:wght@200;300;400;600;700&display=swap"
     rel="stylesheet">
+  <!-- swiperJs -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <!-- ICONSCOUT -->
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <!-- boxicons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <!-- CSS -->
   <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-
   <nav>
-    <div class="container nav__container"><a href="index.html" class="logo">
-        <h4>CUSHY<br><span>cuisine</span> </h4>
+    <div class="container nav__container">
+
+      <a href="#about" class="logo">
+        <h4><i class="uil uil-utensils-alt"></i>CUSHY<br><span>cuisine</span> </h4>
       </a>
+
       <ul class="nav__menu">
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact.html">Contact</a></li>
-        <li><a href="#order" class="except">oder Now</a></li>
+        <li><a href="/index.html" class="nav__link">Home</a></li>
+        <li><a href="#menu" class="nav__link">Menu</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#review" class="nav__link">Review</a></li>
+        <li><a href="#order" class="nav__link">oder Now</a></li>
       </ul><i class="uil uil-bars" id="open_menu_btn"></i><i class="uil uil-multiply" id="close_menu_btn"></i>
+      <marquee behavior="alternate" direction="">+2348164228535</marquee>
     </div>
+
   </nav>
 
   <!-- ************Header__Content****************** -->
@@ -42,9 +50,9 @@
           so you can cook a fresh food. </p><a href="#order" class="btn">Order Now</a>
       </div>
     </div>
-    <div class="tray"><img class="small_device-image" src="./foodie2.JPG" alt="food image"></div>
+    <div class="tray"><img class="small_device-image" src="images/foodie2.JPG" alt="food image"></div>
     <div class="plate">
-      <div class="food"><img class="header__food-image" src="./foodie2.JPG" alt="food image"></div>
+      <div class="food"><img class="header__food-image" src="images/foodie2.JPG" alt="food image"></div>
     </div>
   </section>
 
@@ -58,21 +66,20 @@
           sit amet consectetur adipisicing elit. Veniam, molestias.</p><a href="#" class="btn menu__btn">View More</a>
       </div>
 
-      <div class="food__container">
-        <!-- <a href="#order"> -->
-          <div class="card">
-            <img class="menu__food-image" src="./food1.jpg" alt="food image">
-            <div class="about__food">
-              <div class="food__stripe">
-                <h2>Jollof rice</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. riores, dolor!</p>
-                <div class="food__price">#1800</div>
-              </div>
+      <div class="food__container" id="order__details">
+        <div class="card">
+          <img class="menu__food-image" src="images/food6.jpg" alt="food image">
+          <div class="about__food">
+            <div class="food__stripe">
+              <h2>Jollof rice</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. riores, dolor!</p>
+              <div class="food__price">#1800</div>
             </div>
           </div>
-        <!-- </a> -->
+        </div>
+
         <div class="card">
-          <img class="menu__food-image" src="./food1.jpg" alt="food image">
+          <img class="menu__food-image" src="images/food2.jpg" alt="food image">
           <div class="about__food">
             <div class="food__stripe">
               <h2>Jollof rice</h2>
@@ -83,7 +90,7 @@
         </div>
 
         <div class="card">
-          <img class="menu__food-image" src="./food1.jpg" alt="food image">
+          <img class="menu__food-image" src="images/food3.jpg" alt="food image">
           <div class="about__food">
             <div class="food__stripe">
               <h2>Jollof rice</h2>
@@ -93,7 +100,7 @@
           </div>
         </div>
         <div class="card">
-          <img class="menu__food-image" src="./food1.jpg" alt="food image">
+          <img class="menu__food-image" src="images/food4.jpg" alt="food image">
           <div class="about__food">
             <div class="food__stripe">
               <h2>Jollof rice</h2>
@@ -104,7 +111,7 @@
         </div>
 
         <div class="card">
-          <img class="menu__food-image" src="./food1.jpg" alt="food image">
+          <img class="menu__food-image" src="images/food5.jpg" alt="food image">
           <div class="about__food">
             <div class="food__stripe">
               <h2>Jollof rice</h2>
@@ -132,7 +139,7 @@
 
       <div class="about__details">
         <div class="about__left">
-          <img src="./about-img.png" alt="Food image">
+          <img src="images/about-img1.jpg" alt="Food image">
         </div>
 
         <div class="about__right">
@@ -156,6 +163,236 @@
   </section>
 
 
+  <!-- ****************Review SECTION******************* -->
+
+  <section class="Review review__container" id="review">
+    <div class="review__title">
+      <h3 class="heading">Customer's Review</h3>
+      <h2 class="sub__heading">What they say</h2>
+    </div>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="review__card">
+            <div class="user__image">
+              <img src="images/avatar8.jpg" alt="Customer Image">
+            </div>
+            <div class="user__rating">
+              <h3>John Doe</h3>
+              <div>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star-half'></i>
+              </div>
+            </div>
+            <p>"I have ordered from this food website several times now and I am always impressed by the consistency in
+              the quality of
+              the food. The flavors are authentic and the portions are generous. Plus, their customer service is
+              excellent. Highly
+              recommend!"</p>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="review__card">
+            <div class="user__image">
+              <img src="images/trainer1.jpg" alt="Customer Image">
+            </div>
+            <div class="user__rating">
+              <h3> odewumi thewealth</h3>
+              <div>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star-half'></i>
+                <i class='bx bx-star'></i>
+              </div>
+            </div>
+            <p>"I was looking for a healthy food option and stumbled upon this food website. I ordered a salad and it
+              was one of the
+              freshest and tastiest salads I've ever had. The ingredients were clearly high quality and well-prepared.
+              Will be
+              ordering from here again soon."</p>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="review__card">
+            <div class="user__image">
+              <img src="images/trainer2.jpg" alt="Customer Image">
+            </div>
+            <div class="user__rating">
+              <h3>Angel peperenpe</h3>
+              <div>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star-half'></i>
+                <i class='bx bx-star'></i>
+                <i class='bx bx-star'></i>
+              </div>
+            </div>
+            <p>"I have a gluten allergy and was pleased to find that this food website has a variety of gluten-free
+              options. The food
+              was delicious and I didn't have to worry about any gluten reactions. Will be ordering from here again!"
+            </p>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="review__card">
+            <div class="user__image">
+              <img src="images/trainer3.jpg" alt="Customer Image">
+            </div>
+            <div class="user__rating">
+              <h3>Alabi tolulope</h3>
+              <div>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star-half'></i>
+              </div>
+            </div>
+            <p>"I'm a vegetarian and it's not always easy to find good vegetarian options when ordering food online. But
+              this food
+              website has an extensive vegetarian menu that is just as delicious as their non-vegetarian options. I
+              highly recommend
+              trying their paneer tikka masala."</p>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="review__card">
+            <div class="user__image">
+              <img src="images/trainer4.jpg" alt="Customer Image">
+            </div>
+            <div class="user__rating">
+              <h3>John D.</h3>
+              <div>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star-half'></i>
+              </div>
+            </div>
+            <p>"I ordered from this food website for the first time and was pleasantly surprised by the quality of the
+              food. The
+              delivery was prompt and the packaging was neat. I'll definitely be ordering from here again!" - John D.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="swiper-slide">
+          <div class="review__card">
+            <div class="user__image">
+              <img src="images/trainer5.jpg" alt="Customer Image">
+            </div>
+            <div class="user__rating">
+              <h3>Adeniyi cushy</h3>
+              <div>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star-half'></i>
+              </div>
+            </div>
+            <p>"I recently ordered from this food website and I was blown away by the quality of the food and the
+              service! The website
+              was easy to navigate and placing an order was a breeze. The food arrived on time and was still hot and
+              fresh, even
+              though it had been delivered to my doorstep."</p>
+          </div>
+        </div>
+
+
+        <div class="swiper-slide">
+          <div class="swiper-slide">
+            <div class="review__card">
+              <div class="user__image">
+                <img src="images/trainer2.jpg" alt="Customer Image">
+              </div>
+              <div class="user__rating">
+                <h3>Abeke H</h3>
+                <div>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star-half'></i>
+                </div>
+              </div>
+              <p>"The customer service was also exceptional. When I had a question about my order, the customer service
+                representative was
+                friendly and helpful. They were able to quickly resolve my issue and I was impressed by their
+                professionalism."</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-slide">
+            <div class="review__card">
+              <div class="user__image">
+                <img src="images/avatar8.jpg" alt="Customer Image">
+              </div>
+              <div class="user__rating">
+                <h3>John Doe</h3>
+                <div>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star-half'></i>
+                </div>
+              </div>
+              <p>I olajide recently purchased this product and it has exceeded my expectations. The
+                quality
+                is
+                great
+                and it arrived very quickly. I highly recommend it to anyone in the market for a similar product.</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-slide">
+            <div class="review__card">
+              <div class="user__image">
+                <img src="images/trainer3.jpg" alt="Customer Image">
+              </div>
+              <div class="user__rating">
+                <h3>John Doe</h3>
+                <div>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star-half'></i>
+                </div>
+              </div>
+              <p>I olajide recently purchased this product and it has exceeded my expectations. The
+                quality
+                is
+                great
+                and it arrived very quickly. I highly recommend it to anyone in the market for a similar product.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+
+
+
+    <!-- <button class="load-more-button">Load More</button> -->
+
+  </section>
 
   <!-- ****************ORDER SECTION******************* -->
 
@@ -169,18 +406,18 @@
       <div class="inputBox">
         <div class="input">
           <label>your name</label>
-          <input type="text" name="Name" placeholder="enter your name">
+          <input type="text" name="Name" placeholder="enter your name" required>
         </div>
         <div class="input">
-          <label>your number</label>
-          <input type="number" name="phone number" placeholder="enter your number">
+          <label>your phone number</label>
+          <input type="number" name="phone number" placeholder="enter your number" required>
         </div>
       </div>
 
       <div class="inputBox">
         <div class="input">
           <label>your order</label>
-          <input list="food" name="food" placeholder="enter food name">
+          <input list="food" name="food" placeholder="enter food name" required>
           <datalist id="food">
             <option value="Jollof Rice"></option>
             <option value=" Fried Rice"></option>
@@ -191,7 +428,7 @@
         </div>
         <div class="input">
           <label>additional food</label>
-          <input list="food" name="food" placeholder="extra with food" required>
+          <input list="food" name="food" placeholder="extra food" required>
           <datalist id="food">
             <option value="Jollof Rice"></option>
             <option value=" Fried Rice"></option>
@@ -221,7 +458,7 @@
         </div>
         <div class="input">
           <label>your message</label>
-          <textarea name="Message" placeholder="enter your message" id="" cols="20" rows="10"></textarea>
+          <textarea name="Message" placeholder="enter your message" id="" cols="20" rows="10" required></textarea>
         </div>
       </div>
 
@@ -238,7 +475,7 @@
 
       <div class="box">
         <h3>locations</h3>
-        <a href="#">Ile-Ife</a>
+        <a href="#"><i class="uil uil-location-pin-alt"></i>Red gate along ibadan road, Ile-Ife, osun state.</a>
 
       </div>
 
@@ -249,21 +486,22 @@
         <a href="#menu">menu</a>
         <a href="#">reivew</a>
         <a href="#order">order</a>
+        <div><i class="uil uil-arrow-up"></i></div>
       </div>
 
       <div class="box">
         <h3>contact info</h3>
-        <a href="tel:+2348164223585">+2348164223585</a>
-        <a href="tel:+2348137441125">+2348137441125</a>
-        <a href="mailto:adeniyicushy@gmail.com">adeniyicushy@gmail.com</a>
-        <a href="#">Red gate along ibadan road Ile-Ife</a>
+        <a href="tel:+2348164223585"><i class="uil uil-phone-alt"></i>+2348164223585</a>
+        <a href="tel:+2348137441125"><i class="uil uil-phone-alt"></i>+2348137441125</a>
+        <a href="mailto:adeniyicushy@gmail.com"><i class="uil uil-envelopes"></i>adeniyicushy@gmail.com</a>
+        <a href="#"><i class="uil uil-location-pin-alt"></i>Red gate along ibadan road, Ile-Ife, osun state.</a>
       </div>
 
       <div class="box">
         <h3>follow us</h3>
-        <a href="https://www.facebook.com/cushycuisine">facebook</a>
-        <a href="#">twitter</a>
-        <a href="#">instagram</a>
+        <a href="https://www.facebook.com/cushycuisine"><i class="uil uil-facebook-f"></i>facebook</a>
+        <a href="#"><i class="uil uil-twitter-alt"></i></i>twitter</a>
+        <a href="#"><i class="uil uil-instagram"></i></i>instagram</a>
       </div>
 
     </div>
@@ -272,9 +510,12 @@
 
   </section>
 
+  <!-- SwiperJs script -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="index.js"></script>
+  <script src="me.js"></script>
 </body>
 
 </html>

@@ -14,15 +14,14 @@
   /************Color**************/
   --color-bgc-header: #142440;
   --color-white: #fff;
-  --color-dark: #666;
+  --color-light: #ccf0f3;
+  --color-dark-1: #666;
+  --color-dark-2: #222;
   --text-color1: #193a6f;
   --color-1: #ff4a44;
+  /* --color-2: #632107; */
+  --color-2: #193a6f;
   /* --color-primary: #ff4f1f; */
-  --color-primary2: #dc6601;
-
-  /* #f44a07 */
-  --color-light: #ccf0f3;
-  --color-dark: #222;
   --box-shadow: 0 0 5rem rgba(0, 0, 0, 0.1);
   --box-shadow2: 0 0 5rem rgba(0, 0, 0, 0.4);
 
@@ -42,7 +41,7 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  color: var(--color-dark);
+  color: var(--color-dark-1);
   background: var(--color-primary);
 }
 
@@ -53,6 +52,7 @@ body {
 }
 
 section {
+  /* height: 100vh; */
   padding: 2rem 6%;
 }
 
@@ -75,23 +75,24 @@ img {
 
 .sub__heading {
   font-size: 4rem;
+  color: var(--color-dark-2);
 }
 
 .btn {
   display: inline-block;
   background-color: var(--color-white);
-  color: var(--color-dark);
   padding: 1rem 1.5rem;
   border: 1px solid transparent;
   font-weight: 500;
   font-size: 2rem;
   transition: var(--transition);
+  cursor: pointer;
 }
 
 .btn:hover {
   background-color: transparent;
-  color: var(--color-dark);
-  border-color: var(--color-dark);
+  color: var(--color-dark-1);
+  border-color: var(--color-dark-2);
 }
 
 /* **************************NAVBAR************************ */
@@ -111,103 +112,48 @@ nav {
   position: relative;
   justify-content: space-between;
 }
-
+.nav__container marquee{
+color: var(--color-light);
+letter-spacing: 0.5rem;
+font-size: 1.5rem;
+  position: absolute;
+  top: 5rem;
+  padding-bottom: 1.5rem;
+}
 .nav__container .logo {
   font-size: 1.5rem;
   line-height: 1.4rem;
 }
-
+.nav__container .logo .uil-utensils-alt{
+font-size: 2.5rem;
+color: var(--color-light);
+}
 .nav__container .logo span {
   color: var(--color-1);
 }
 
-.uil {
+.nav__container .uil-bars, .uil-multiply {
   display: none;
 }
 
 .nav__menu {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .nav__menu a {
   font-size: 1.6rem;
+  padding: 0.6rem 1.5rem;
   transition: var(--transition);
 }
 
+.active,
 .nav__menu a:hover {
   color: var(--color-1);
-}
-
-.except {
-  background: var(--color-primary);
-  padding: 1rem;
+  padding: 0.6rem 1.5rem;
   border-radius: 1rem;
-  transition: var(--transition);
-}
-
-.except:hover {
-  border-bottom: var(--color-white);
-  background-color: transparent;
-}
-
-/* **************************NAVBAR************************ */
-nav {
-  width: 100vw;
-  height: 7rem;
-  position: fixed;
-  top: 0;
-  z-index: 11;
-  background-color: var(--color-bgc-header);
-}
-
-.nav__container {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  position: relative;
-  justify-content: space-between;
-}
-
-.nav__container .logo {
-  font-size: 1.5rem;
-  line-height: 1.4rem;
-}
-
-.nav__container .logo span {
-  color: var(--color-1);
-}
-
-.uil {
-  display: none;
-}
-
-.nav__menu {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-}
-
-.nav__menu a {
-  font-size: 1.6rem;
-  transition: var(--transition);
-}
-
-.nav__menu a:hover {
-  color: var(--color-1);
-}
-
-.except {
-  background: var(--color-primary);
-  padding: 1rem;
-  border-radius: 1rem;
-  transition: var(--transition);
-}
-
-.except:hover {
-  border-bottom: var(--color-white);
-  background-color: transparent;
+  background-color: var(--text-color1);
 }
 
 /* ***************Header section*******************/
@@ -304,9 +250,10 @@ nav {
 
 
 /* ****************MENU SECTION*******************  */
-#menu{
+#menu {
   box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
 }
+
 .menu__container {
   margin-top: 2rem;
 }
@@ -342,13 +289,14 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-light);
+  background: var(--color-light);
   border: 2px solid var(--text-color1);
   border-radius: 0 4rem;
   box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2);
- transition: var(--transition);
+  transition: var(--transition);
 }
-.card:hover{
+
+.card:hover {
   background-color: transparent;
   cursor: pointer;
 }
@@ -358,7 +306,8 @@ nav {
   width: 20rem;
   height: 20rem;
   object-fit: cover;
-  border-radius: 50%;
+  border-top-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
   margin-top: 1rem;
 }
 
@@ -394,7 +343,6 @@ p {
 .about__container {
   height: auto;
   margin-top: 1rem;
-  /* background-color: red; */
 }
 
 .about__title {
@@ -404,7 +352,9 @@ p {
   align-items: center;
   gap: 0.8rem;
 }
-
+.about__title .sub__heading{
+  margin-bottom: 1rem;
+}
 .about__details {
   display: flex;
   flex-wrap: wrap;
@@ -444,10 +394,68 @@ p {
   margin: 1rem 0;
 }
 
+/***********************REVIEW SECTION*********************/
+.review__container{
+  box-shadow: inset 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
+
+}
+.review__title {
+  margin-bottom: 2rem;
+}
+
+.review__title .heading {
+  margin-bottom: 1rem;
+}
+
+.swiper-wrapper {
+  margin-bottom: 5rem;
+}
+
+.review__card {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.user__image {
+  display: flex;
+  justify-content: center;
+}
+
+.review__card .user__image img {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+}
+
+.review__card .user__rating {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.review__card h3 {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.review__card p {
+  text-transform: none;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.review__card .bx {
+  color: var(--text-color1);
+  font-size: 2rem;
+}
+
+
 /***********************ORDER SECTION*********************/
-.order__container{
+.order__container {
   box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
 }
+
 .sub__heading,
 .heading {
   text-align: center;
@@ -505,7 +513,7 @@ form .inputBox .input textarea {
 form .btn {
   margin-top: 23px;
   color: var(--color-light);
-    background: var(--color-bgc-header);
+  background: var(--color-bgc-header);
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -517,7 +525,21 @@ form .btn {
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 1.5rem;
 }
-
+.footer .footer__container .box .uil{
+  font-size: 2.5rem;
+  color: var(--color-bgc-header);
+padding-right: 0.8rem;
+}
+.footer .footer__container .box{
+  position: relative;
+}
+.footer .footer__container .box .uil-arrow-up{
+  position: absolute;
+  left: 8rem;
+  top: 8rem;
+  font-size: 4rem;
+ 
+}
 .footer .footer__container .box h3 {
   padding: .5rem 0;
   font-size: 2.5rem;
@@ -528,7 +550,7 @@ form .btn {
   display: block;
   padding: .5rem 0;
   font-size: 1.5rem;
-  color: var(--color-light);
+  color: var(--color-dark-2);
 }
 
 .footer .footer__container .box a:hover {
@@ -539,16 +561,18 @@ form .btn {
 .footer .credit {
   text-align: center;
   border-top: .3rem solid var(--color-bgc-header);
-  font-size: 2rem;
-  color: var(--black);
+  font-size: 1.5rem;
+  color: var(--color-dark-2);
   padding: .5rem;
   padding-top: 1.5rem;
   margin-top: 1.5rem;
 }
 
 .footer .credit span {
-  color: var(--green);
+  color: var(--color-2);
 }
+
+
 
 @media screen and (max-width: 1024px) {
 
@@ -590,7 +614,7 @@ form .btn {
 
 
   /* ***********NAVBAR********************** */
-  .uil {
+  .nav__container .uil {
     display: inline-block;
     font-size: 3rem;
     cursor: pointer;
@@ -645,7 +669,7 @@ form .btn {
   }
 
   .nav__menu li a {
-    background-color: #632107;
+    background-color: var(--color-2);
     box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.6);
     height: 100%;
     width: 100%;
@@ -653,9 +677,6 @@ form .btn {
     place-items: center;
   }
 
-  .except {
-    /* visibility: hidden; */
-  }
 
   /* *******HEADER SECTION *************** */
   .header__container {
@@ -748,14 +769,30 @@ form .btn {
     background-color: transparent;
     border: 1px solid white;
     top: 25%;
-    /* display: none; */
   }
 
 }
+
 @media screen and (max-width: 430px) {
 
-     form .inputBox .input {
-       width: 100%;
-  
-     }
+  .sub__heading {
+    font-size: 2.5rem;
+  }
+
+  form .inputBox .input {
+    width: 100%;
+
+  }
+
+  .menu__title {
+    line-height: 1.2;
+  }
+
+  .menu__title p {
+    font-size: 1.5rem;
+  }
+
+  .review__title .sub__heading {
+    font-size: 2.5rem;
+  }
 }
